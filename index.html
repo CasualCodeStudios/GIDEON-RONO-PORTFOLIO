@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gideon Rono — CBC Facilitator & Computer Studies Teacher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<!-- CANVAS BG -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- CURSOR -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- SCROLL TOP -->
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+  <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M9 14V4M9 4L5 8M9 4l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <div class="nav-brand">
+    <img src="logo12.png" alt="logo">
+  </div>
+  <div class="live-dot">Available</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#what-i-do">Services</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#growth">Journey</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<nav class="nav-drawer" id="navDrawer" aria-label="Mobile menu">
+  <a href="#about"    onclick="closeDrawer()">About</a>
+  <a href="#what-i-do" onclick="closeDrawer()">Services</a>
+  <a href="#teaching" onclick="closeDrawer()">Teaching</a>
+  <a href="#projects" onclick="closeDrawer()">Projects</a>
+  <a href="#growth"   onclick="closeDrawer()">Journey</a>
+  <a href="#contact"  onclick="closeDrawer()">Contact</a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-content">
+    <!-- LEFT -->
+    <div class="hero-left">
+      <span class="hero-tag">Computer Studies Teacher · CBE Facilitation · Kenyan Education </span>
+      <h1 class="hero-name">
+        Gideon<span class="accent">Rono</span>
+      </h1>
+      <p class="hero-subtitle">Empowering learners and educators through ICT, competency-based education, and a relentless commitment to excellence in Kenya's classrooms.</p>
+      <div class="hero-badges">
+        <span class="badge">Computer Studies</span>
+        <span class="badge">ICT Teacher</span>
+        <span class="badge green">CBE Facilitator</span>
+        <span class="badge green">Digital Literacy</span>
+        <span class="badge">STEM Pathway</span>
+        <span class="badge">Mentor &amp; Coach</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary">Explore My Portfolio →</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+
+    <!-- RIGHT — 3D TILT CARD -->
+    <div class="hero-right">
+      <div class="card-wrapper" id="card-wrapper">
+        <div id="profile-card">
+          <div class="card-corner tl"></div>
+          <div class="card-corner tr"></div>
+          <div class="card-corner bl"></div>
+          <div class="card-corner br"></div>
+          <div class="card-scan"></div>
+          <div class="card-portrait-placeholder">
+            <img src="https://i.pinimg.com/736x/19/98/63/199863be3b12630c791cb5b11850b36a.jpg" alt="portrait">
+          </div>
+          <div class="card-info">
+            <span class="card-title-label">CBE Facilitator · Computer Studies</span>
+            <div class="card-name">Gideon Rono</div>
+            <div class="card-role">Educator · ICT Advocate · Mentor<br>Kenyan Education System</div>
+          </div>
+          <div class="card-glow-line"></div>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><div class="stat-num">CBE</div><div class="stat-label">Certified Facilitator</div></div>
+        <div class="stat-item"><div class="stat-num">ICT</div><div class="stat-label">Tech Integration</div></div>
+        <div class="stat-item"><div class="stat-num">365</div><div class="stat-label">Days Learning</div></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track">
+    <div class="ticker-item"><span>✦</span>Computer Studies</div>
+    <div class="ticker-item"><span>✦</span>CBE Facilitation</div>
+    <div class="ticker-item"><span>✦</span>Digital Literacy</div>
+    <div class="ticker-item"><span>✦</span>ICT Integration</div>
+    <div class="ticker-item"><span>✦</span>Kenyan Education</div>
+    <div class="ticker-item"><span>✦</span>STEM Pathway</div>
+    <div class="ticker-item"><span>✦</span>Competency-Based Learning</div>
+    <div class="ticker-item"><span>✦</span>Student Mentorship</div>
+    <div class="ticker-item"><span>✦</span>Problem Solving</div>
+    <div class="ticker-item"><span>✦</span>Environmental Conservation</div>
+    <div class="ticker-item"><span>✦</span>Computer Studies</div>
+    <div class="ticker-item"><span>✦</span>CBE Facilitation</div>
+    <div class="ticker-item"><span>✦</span>Digital Literacy</div>
+    <div class="ticker-item"><span>✦</span>ICT Integration</div>
+    <div class="ticker-item"><span>✦</span>Kenyan Education</div>
+    <div class="ticker-item"><span>✦</span>STEM Pathway</div>
+    <div class="ticker-item"><span>✦</span>Competency-Based Learning</div>
+    <div class="ticker-item"><span>✦</span>Student Mentorship</div>
+    <div class="ticker-item"><span>✦</span>Problem Solving</div>
+    <div class="ticker-item"><span>✦</span>Environmental Conservation</div>
+  </div>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-img-stack reveal">
+        <div class="about-img-main">
+          <div class="about-img-main-placeholder">
+            <img src="https://i.pinimg.com/1200x/57/9d/a6/579da6bd0ad12334c7de0dd92f898172.jpg" alt="">
+          </div>
+        </div>
+        <div class="about-img-accent">
+          <img src="https://i.pinimg.com/736x/b3/66/0a/b3660a55314dcb675100078806fc3910.jpg" alt="">
+        </div>
+        <div class="about-decor-ring"></div>
+        
+        <div class="about-decor-ring"></div>
+      </div>
+
+      <div class="about-text reveal">
+        <span class="section-label">Who He Is</span>
+        <h2 class="section-title">About <em>Gideon</em></h2>
+
+        <p>Gideon Rono is a dedicated Computer Studies and ICT teacher with a passion for empowering the next generation of digital citizens in Kenya. With a deep commitment to learner-centred education and technology integration, he designs lessons that connect theoretical knowledge with real-world problem-solving.</p>
+
+        <p>As a CBC Facilitator, Gideon works closely with fellow educators to implement competency-based learning strategies, develop learner portfolios, and align teaching practices with Kenya's evolving curriculum framework. He believes that a great teacher never stops learning — and he lives this philosophy every day.</p>
+
+        <p>Beyond the classroom, Gideon is passionate about environmental conservation, enjoys football, volleyball, music, and dancing — a reminder that the most effective educators bring their whole selves to their work.</p>
+
+        <div class="about-pills">
+          <span class="pill">Computer Studies</span>
+          <span class="pill">ICT</span>
+          <span class="pill">CBC Facilitation</span>
+          <span class="pill">Digital Literacy</span>
+          <span class="pill">Student Mentorship</span>
+          <span class="pill">Environmental Advocacy</span>
+          <span class="pill">Lifelong Learning</span>
+        </div>
+
+        <div class="accordion-cards">
+          <div class="acc-item" id="acc-philosophy">
+            <button class="acc-trigger" onclick="toggleAccordion('philosophy')">
+              <span class="acc-title">Teaching Philosophy — Learner-Centred Excellence</span>
+              <span class="acc-arrow">→</span>
+            </button>
+          </div>
+          <div class="acc-item" id="acc-cbc">
+            <button class="acc-trigger" onclick="toggleAccordion('cbc')">
+              <span class="acc-title">CBC Facilitation — Shaping Kenya's Curriculum</span>
+              <span class="acc-arrow">→</span>
+            </button>
+          </div>
+          <div class="acc-item" id="acc-ict">
+            <button class="acc-trigger" onclick="toggleAccordion('ict')">
+              <span class="acc-title">ICT &amp; Technology — Bridging the Digital Divide</span>
+              <span class="acc-arrow">→</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCORDION PANELS -->
+    <div class="acc-panel-wrap" id="panel-philosophy">
+      <div class="acc-panel-inner">
+        <button class="acc-close" onclick="closeAccordion('philosophy')">✕ Close</button>
+        <h3>Teaching Philosophy — Learner-Centred Excellence</h3>
+        <p>Gideon's approach to teaching is grounded in a deep belief that every student has the capacity to thrive when given the right support, tools, and challenge. He designs lessons around real-world ICT applications that students encounter daily — from digital communication to spreadsheet analysis — ensuring that knowledge is always actionable.</p>
+        <p>He prioritises mentoring over lecturing. In his classroom, questions are celebrated, mistakes are learning opportunities, and problem-solving is a collaborative endeavour. His goal is not merely to teach students what to answer, but to build their capacity to ask better questions.</p>
+      </div>
+    </div>
+    <div class="acc-panel-wrap" id="panel-cbc">
+      <div class="acc-panel-inner">
+        <button class="acc-close" onclick="closeAccordion('cbc')">✕ Close</button>
+        <h3>CBC Facilitation — Shaping Kenya's Curriculum</h3>
+        <p>As a CBC Facilitator, Gideon plays a pivotal role in helping teachers navigate Kenya's competency-based curriculum. He conducts in-school workshops, models best practice, and helps educators develop assessment tools that measure learner competencies — not just content recall.</p>
+        <p>He supports the development of learner portfolios, CBC-aligned rubrics, and project-based tasks that encourage critical thinking, creativity, and collaboration. His facilitation work has touched multiple teachers across his region, strengthening the foundation of CBC implementation at the school level.</p>
+      </div>
+    </div>
+    <div class="acc-panel-wrap" id="panel-ict">
+      <div class="acc-panel-inner">
+        <button class="acc-close" onclick="closeAccordion('ict')">✕ Close</button>
+        <h3>ICT &amp; Technology — Bridging the Digital Divide</h3>
+        <p>Gideon is a committed technology-in-education advocate. He integrates ICT tools into his lessons to enhance engagement, track learner progress, and connect students with global learning resources. From digital portfolios to online collaboration platforms, he helps students build the skills Kenya's digital economy demands.</p>
+        <p>He teaches digital literacy, basic programming concepts, web fundamentals, and productivity applications — ensuring students leave his classroom not just as passive technology consumers, but as confident, creative digital citizens ready for tomorrow's challenges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT I DO ===== -->
+<section id="what-i-do">
+  <div class="section-inner">
+    <span class="section-label reveal">Services &amp; Roles</span>
+    <h2 class="section-title reveal">What I <em>Do</em></h2>
+    <div class="cards-grid">
+      <div class="role-card reveal">
+        <img src="monitor.png" alt="monitor icon">
+        <h3>Computer Studies Teacher</h3>
+        <p>Teaching programming fundamentals, digital applications, spreadsheets, and digital literacy to secondary school learners in Kenya.</p>
+      </div>
+      <div class="role-card reveal">
+        <img src="book.png" alt="book">
+        <h3>CBE Facilitator</h3>
+        <p>Guiding fellow teachers on CBC curriculum implementation, competency-based assessment, learner portfolio development, and CBC-aligned rubrics.</p>
+      </div>
+      <div class="role-card reveal">
+        <img src="digital-transformation.png" alt="technology">
+        <h3>Technology-in-Education Advocate</h3>
+        <p>Integrating ICT tools, online learning platforms, and digital resources into classroom practice to enhance learner engagement and outcomes.</p>
+      </div>
+      <div class="role-card reveal">
+        <img src="leadership.png" alt="mentorship - leadership">
+        <h3>Mentor &amp; Coach</h3>
+        <p>Mentoring students in critical thinking and problem-solving, while supporting junior teachers in developing their professional practice and confidence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEACHING & CBC ===== -->
+<section id="teaching">
+  <div class="section-inner">
+    <span class="section-label reveal">Teaching &amp; Facilitation</span>
+    <h2 class="section-title reveal">Classroom <em>Impact</em></h2>
+
+    <div class="teaching-layout">
+      <!-- Computer Studies -->
+      <div class="teaching-block">
+        <h3 style="font-family: serif;font-size:1.3rem;color:#fff;margin-bottom:1rem;padding-bottom:.7rem;border-bottom:1px solid rgba(0,196,232,0.12)">Computer Studies &amp; ICT Teaching</h3>
+        <div class="teaching-card reveal">
+          <div class="teaching-card-head">
+            <div class="teaching-card-icon"><img src="literacy.png" alt="digital literacy"></div>
+            <h4>Digital Literacy</h4>
+          </div>
+          <p>Equipping students with Microsoft Office (Word, Excel, PowerPoint), internet safety, and responsible digital communication skills that serve them across all subjects and beyond school.</p>
+        </div>
+        <div class="teaching-card reveal">
+          <div class="teaching-card-head">
+            <div class="teaching-card-icon"><img src="technical-support.png" alt="technical problem solving"></div>
+            <h4>Programming &amp; Problem Solving</h4>
+          </div>
+          <p>Introducing basic programming logic, web fundamentals, and algorithmic thinking — building the computational mindset students need in a rapidly evolving digital economy.</p>
+        </div>
+        <div class="teaching-card reveal">
+          <div class="teaching-card-head">
+            <div class="teaching-card-icon"><img src="learning.png" alt="learning icon"></div>
+            <h4>ICT Projects &amp; Applied Learning</h4>
+          </div>
+          <p>Guiding students through hands-on ICT projects that connect digital skills to real community problems, making learning purposeful and memorable.</p>
+        </div>
+      </div>
+
+      <!-- CBC Facilitation -->
+      <div class="teaching-block">
+        <h3 style="font-family:serif;font-size:1.3rem;color:#fff;margin-bottom:1rem;padding-bottom:.7rem;border-bottom:1px solid rgba(62,201,138,0.2)">CBC Facilitation Work</h3>
+        <div class="teaching-card reveal">
+          <div class="teaching-card-head">
+            <div class="teaching-card-icon"><img src="workshop.png" alt="teacher workshops"></div>
+            <h4>Teacher Workshops &amp; In-School Training</h4>
+          </div>
+          <p>Facilitating professional development sessions that equip teachers with practical CBC implementation strategies, from competency mapping to continuous assessment design.</p>
+        </div>
+        <div class="teaching-card reveal">
+          <div class="teaching-card-head">
+            <div class="teaching-card-icon"><img src="evaluation.png" alt="Assessment tools"></div>
+            <h4>Assessment Tools &amp; Learner Portfolios</h4>
+          </div>
+          <p>Developing CBC-aligned rubrics, formative assessment frameworks, and learner portfolio templates that provide meaningful evidence of student growth and competency.</p>
+        </div>
+
+        <div style="margin-top:1.5rem;">
+          <h4 style="font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--green);margin-bottom:1rem;">Key Outcomes</h4>
+          <ul class="impact-list">
+            <li>Supported teachers in integrating CBC assessment tools across subjects</li>
+            <li>Developed CBC-aligned project tasks and rubrics for school-wide adoption</li>
+            <li>Facilitated blended learning approaches using digital platforms</li>
+            <li>Guided students in creating community-impact ICT projects</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HIGHLIGHTS ===== -->
+<section id="highlights">
+  <div class="section-inner">
+    <span class="section-label reveal">Quick Highlights</span>
+    <h2 class="section-title reveal">Experience at a <em>Glance</em></h2>
+    <div class="highlights-grid">
+      <div class="highlight-item reveal">
+        <div class="hi-num" title="Information and Communication Technology">ICT</div>
+        <div class="hi-label">Computer Studies &amp; ICT Teaching</div>
+      </div>
+      <div class="highlight-item reveal">
+        <div class="hi-num" title="Competence Based Curriculum">CBC</div>
+        <div class="hi-label">Certified Curriculum Facilitator</div>
+      </div>
+      <div class="highlight-item reveal">
+        <div class="hi-num" title="Science, Technology, Engineering and Mathematics">STEM</div>
+        <div class="hi-label">Pathway Integration &amp; Advocacy</div>
+      </div>
+      <div class="highlight-item reveal">
+        <div class="hi-num">360°</div>
+        <div class="hi-label">Holistic Learner-Centred Approach</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects">
+  <div class="section-inner">
+    <span class="section-label reveal">Student Work &amp; Projects</span>
+    <h2 class="section-title reveal">Showcase &amp; <em>Results</em></h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <span class="project-num">Project 01</span>
+        <h3>CBC Community Solutions</h3>
+        <p>Group project where learners applied competency-based learning to identify community challenges and present digital solutions — assessed using CBC rubrics measuring teamwork, creativity, and critical thinking.</p>
+        <div class="project-tags">
+          <span class="project-tag">CBC</span>
+          <span class="project-tag">Teamwork</span>
+          <span class="project-tag">Problem Solving</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <span class="project-num">Project 02</span>
+        <h3>Digital Learner Portfolios</h3>
+        <p>Implementing e-portfolio systems allowing students to document their competency growth, curate evidence of learning, and reflect on their CBC journey using accessible digital tools.</p>
+        <div class="project-tags">
+          <span class="project-tag">E-Portfolio</span>
+          <span class="project-tag">Assessment</span>
+          <span class="project-tag">ICT</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <span class="project-num">Project 03</span>
+        <h3>Teacher CBC Training Workshop</h3>
+        <p>Facilitated comprehensive in-school CBC training sessions for colleagues, equipping them with practical tools for competency mapping, continuous assessment design, and learner portfolio development.</p>
+        <div class="project-tags">
+          <span class="project-tag">Facilitation</span>
+          <span class="project-tag">CBC</span>
+          <span class="project-tag">PD</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <span class="project-num">Project 04</span>
+        <h3>Blended Learning Integration</h3>
+        <p>Introduced blended learning approaches combining online resources with face-to-face instruction, enabling differentiated learning pathways that cater to diverse learner needs and abilities.</p>
+        <div class="project-tags">
+          <span class="project-tag">Blended Learning</span>
+          <span class="project-tag">Online Tools</span>
+          <span class="project-tag">Differentiation</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+  <span class="project-num">Project 05</span>
+  <h3>Fighting Gender-Based Violence</h3>
+  <p>A student-led ICT initiative raising awareness on gender-based violence through digital campaigns, data visualisation of GBV statistics, and community outreach resources — empowering learners to drive real social change.</p>
+  <div class="project-tags">
+    <span class="project-tag">Social Impact</span>
+    <span class="project-tag">GBV Awareness</span>
+    <span class="project-tag">ICT</span>
+  </div>
+      </div>
+      <div class="project-card reveal">
+      <span class="project-num">Project 06</span>
+      <h3>Machine Learning</h3>
+      <p>An introductory ICT module guiding students through the foundational concepts of machine learning — from supervised and unsupervised learning to real-world AI applications — building computational thinking and preparing learners for Kenya's digital future.</p>
+      <div class="project-tags">
+        <span class="project-tag">Machine Learning</span>
+        <span class="project-tag">AI Literacy</span>
+        <span class="project-tag">ICT</span>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== GROWTH ===== -->
+<section id="growth">
+  <div class="section-inner">
+    <span class="section-label reveal">Professional Growth</span>
+    <h2 class="section-title reveal">Education &amp; <em>Recognition</em></h2>
+
+    <div class="growth-layout">
+      <div class="growth-col">
+        <h3 class="reveal">Professional Journey</h3>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <h4>CBC Facilitator Certification</h4>
+              <span>KICD · Ongoing</span>
+              <p>Certified to guide teachers in implementing Kenya's Competency-Based Curriculum, from lesson design to continuous assessment and learner portfolio frameworks.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <h4>Computer Studies Teacher</h4>
+              <span>Secondary School · Kenya</span>
+              <p>Teaching Computer Studies and ICT to secondary school learners, designing learner-centred lessons that integrate technology with real-world problem solving.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <h4>ICT Integration Workshop</h4>
+              <span>Professional Development</span>
+              <p>Participated in ICT-integration workshops for secondary teachers, advancing skills in blended learning design and digital tool integration across subjects.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+              <h4>Peer Recognition — Teaching Excellence</h4>
+              <span>School Recognition</span>
+              <p>Consistently recognised by colleagues and administration for innovative teaching methods, dedicated mentorship of students and junior teachers, and commitment to professional growth.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="growth-col">
+        <h3 class="reveal">Education &amp; Certifications</h3>
+        <div class="cert-list reveal">
+          <div class="cert-item">
+            <span class="cert-name">Degree in Education</span>
+            <span class="cert-year">Foundation</span>
+          </div>
+          <div class="cert-item">
+            <span class="cert-name">Computer Studies Specialisation</span>
+            <span class="cert-year">Core</span>
+          </div>
+          <div class="cert-item">
+            <span class="cert-name">CBC Facilitation Certification</span>
+            <span class="cert-year">KICD</span>
+          </div>
+          <div class="cert-item">
+            <span class="cert-name">ICT-in-Education Training</span>
+            <span class="cert-year">Workshop</span>
+          </div>
+          <div class="cert-item">
+            <span class="cert-name">Digital Literacy &amp; Tools</span>
+            <span class="cert-year">Ongoing</span>
+          </div>
+          <div class="cert-item">
+            <span class="cert-name">Continuous Professional Development</span>
+            <span class="cert-year">Annual</span>
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem;">
+          <h3 class="reveal" style="margin-bottom:1rem;">Why Work With Me?</h3>
+          <p class="reveal" style="font-size:.95rem;line-height:1.85;color:rgba(255,255,255,.6);font-weight:300;">I combine hands-on Computer Studies teaching with CBC facilitation expertise to help learners and educators thrive in a digital, competency-based classroom. Whether you need a skilled ICT teacher, a CBC training facilitator, or a dedicated student mentor — I bring energy, commitment, and measurable results to every engagement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="section-inner">
+    <span class="section-label reveal">Get in Touch</span>
+    <h2 class="section-title reveal">Contact <em>Gideon</em></h2>
+
+    <div class="contact-layout">
+      <div class="contact-left reveal">
+        <p>I welcome opportunities for CBC training, ICT collaboration, student mentorship, and professional development partnerships. Whether you are a school administrator, fellow educator, or institution — let's connect and build something meaningful for Kenya's learners.</p>
+
+        <!-- SOCIALS -->
+        <div class="contact-info-items">
+          <a href="" target="_blank" rel="noopener noreferrer"><img src="facebook.png" alt="facebook icon"></a>
+          <a href="" target="_blank" rel="noopener noreferrer"><img src="instagram.png" alt="instagram icon"></a>
+          <a href="" target="_blank" rel="noopener noreferrer"><img src="tik-tok.png" alt="tik-tok icon"></a>
+          <a href="" target="_blank" rel="noopener noreferrer"><img src="whatsapp.png" alt="whatsapp icon"></a>
+        </div>
+
+        <!-- EMAIL AND LOCATION -->
+         <div class="address">
+          <div class="add-item">
+            <span><img src="mail-inbox-app.png" alt="mail icon"></span>
+            <p>example-name@gmail.com</p>
+          </div>
+          <div class="add-item">
+            <span><img src="pin.png" alt="location icon"></span>
+            <p>PIN YOUR LOCATION ADDRESS</p>
+          </div>
+         </div>
+
+      </div>
+
+      <div class="contact-form-wrap reveal">
+        <div class="form-title">Send a Message</div>
+        <form onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Subject</label>
+            <select>
+              <option value="">Select a topic</option>
+              <option>CBC Training Inquiry</option>
+              <option>ICT Collaboration</option>
+              <option>Student Mentorship</option>
+              <option>Professional Development</option>
+              <option>General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea placeholder="Tell me about your opportunity or question..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">Send Message →</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="contact-info-row reveal">
+      <div class="contact-info-item">
+        <span class="ci-label-bot">Subjects</span>
+        <span class="ci-value-bot">Computer Studies · ICT</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="ci-label-bot">CBC Pathway</span>
+        <span class="ci-value-bot">STEM · Technology</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="ci-label-bot">Specialisation</span>
+        <span class="ci-value-bot">CBC Facilitation</span>
+      </div>
+      <div class="contact-info-item">
+        <span class="ci-label-bot">Location</span>
+        <span class="ci-value-bot">Kenya</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-logo"><img src="logo12.png" alt=""></div>
+      <span class="footer-sub">CBC Facilitator · Computer Studies Teacher</span>
+      <p class="footer-desc">Gideon Rono is a Computer Studies and ICT teacher dedicated to empowering learners and educators through technology, competency-based education, and a relentless commitment to excellence in Kenya's classrooms.</p>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#what-i-do">Services</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#projects">Projects</a>
+        <a href="#growth">Growth</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <div class="footer-newsletter">
+      <h4 class="newsletter-title">Our Newsletter</h4>
+      <p class="newsletter-desc">Subscribe for CBC insights, ICT-in-education updates, teaching resources, and professional development opportunities from Gideon's journey.</p>
+      <form onsubmit="handleNewsletter(event)">
+        <div class="newsletter-field">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe</button>
+        </div>
+        <p class="newsletter-fine">No spam. Just insights and opportunities. Unsubscribe anytime.</p>
+      </form>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 Gideon Rono. All rights reserved. — Teaching with Purpose, Learning with Passion.</p>
+    <p class="footer-dev">Developed by <a href="https://casual-code-studios.vercel.app/" target="_blank" rel="noopener noreferrer">Casual Code Studios</a></p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
