@@ -33,6 +33,7 @@ body {
   color:#fff;
   overflow-x:hidden;
   background: var(--navy);
+  display: none;
 }
 
 img { 
