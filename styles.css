@@ -1084,6 +1084,7 @@ section {
 #what-i-do { 
   background:url("https://i.pinimg.com/736x/0b/4c/84/0b4c84fff48a3ad3b3172325de05c2c5.jpg") no-repeat center/cover;
   background-attachment: fixed;
+  position: relative;
 }
 #what-i-do::before{
   content: "";
