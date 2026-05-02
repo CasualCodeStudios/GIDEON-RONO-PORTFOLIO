@@ -24,13 +24,13 @@ for (let i = 0; i < 6; i++) {
 function spawnParticle() {
   return {
     x: Math.random() * W,
-    y: H + 100,
-    vx: (Math.random() - 0.5) * 5,
-    vy: -(Math.random() * 1.2 + 0.3),
-    life: 3,
-    decay: Math.random() * 0.004 + 0.005,
-    size: Math.random() * 42.5 + 0.1,
-    isCyan: Math.random() > 0.5
+    y: H + 110,
+    vx: (Math.random() - 0.5) * 2,
+    vy: -(Math.random() * 4.2 + 0.3),
+    life: 2,
+    decay: Math.random() * 1.004 + 0.005,
+    size: Math.random() * 42.5 + 9.9,
+    isCyan: Math.random() > 0.4
   };
 }
 
