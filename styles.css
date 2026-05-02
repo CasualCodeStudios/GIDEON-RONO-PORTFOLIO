@@ -840,11 +840,12 @@ section {
   justify-content:center;
 }
 .about-img-accent {
-  position:absolute; bottom:0; right:0;
-  width:55%; height:260px;
+  position:absolute; bottom:-2rem; right:0;
+  width:35%; height:160px;
   border-radius:12px; overflow:hidden;
-  border:5px solid rgba(3, 8, 6, 0.99);
+  border:2px solid rgba(3, 8, 6, 0.99);
   box-shadow:0 16px 48px rgba(0,0,0,0.5);
+  animation: hover 3s infinite;
 }
 .about-img-accent img { 
   width:100%; 
